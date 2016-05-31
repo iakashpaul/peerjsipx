@@ -21,6 +21,6 @@ app.use(bodyParser.urlencoded({     // to support URL-encoded bodies
 var server = require('http').createServer(app);
 var options= {port: process.env.PORT || 9000,
   key: 'peerjs',allow_discovery: true,secure: true}
-app.use('/peerjs', ExpressPeerServer(server, options));
+app.use('/', ExpressPeerServer(server, options));
 
 server.listen(process.env.PORT || 9000);
