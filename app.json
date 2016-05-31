@@ -1,0 +1,7 @@
+{
+  "name": "PeerJSIPX",
+  "description": "Peer-to-Peer Video chat using WebRTC with PeerJS-server for signalling & peer-discovery",
+  "logo": "http://node-js-sample.herokuapp.com/node.svg",
+  "keywords": ["node", "express", "static"],
+  "image": "heroku/nodejs"
+}
