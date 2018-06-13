@@ -102,7 +102,8 @@
                 // Randomizer
                 $('#random-call').click(function() {
                     // Initiate a call!
-                    var call = peer.call((randomAction(peer.id)), window.localStream);
+                    var call = peer.call($('#callto-id').val(), window.localStream);
+                    //var call = peer.call((randomAction(peer.id)), window.localStream);
 
                     step3(call);
                 });
@@ -227,6 +228,7 @@
             <div class="flow-text" id="step2">
                 <div class="pure-form"></div>
                 <p>Time: <span id="time">0:00</span></p>
+                <input type="text" placeholder="Call user id..." id="callto-id">
                 <a href="#" class="waves-effect green accent-3 btn" id="random-call">Call Random Peer</a>
             </div>
             <div class="flow-text" id="step3">
