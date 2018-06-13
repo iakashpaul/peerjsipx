@@ -7,13 +7,14 @@
         <link rel="stylesheet" href="../style.css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.14/peer.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.14/peer.js"></script> -->
 
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="../materialize.min.css">
 
         <!-- Compiled and minified JavaScript -->
         <script src="../materialize.min.js"></script>
+        <script src="../peer.min.js"></script>
         <script>
             var data = "";
             var id = "";
@@ -63,7 +64,7 @@
                 host: 'peerjsipx.herokuapp.com',
                 port: 443,
                 secure: true,
-                debug: 1,
+                debug: 3,
                 config: {
                     'iceServers': [{
                         url: 'turn:numb.viagenie.ca',
