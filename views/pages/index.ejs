@@ -62,6 +62,7 @@
             // PeerJS object
             var stunURL = 'stun:stun.l.google.com:19302';
             var userID = chance.zip();
+            console.log("Our id " + userID);
             //userID, 
             var peer = new Peer(userID, {
                 host: 'peerjsipx.herokuapp.com',
@@ -88,7 +89,7 @@
                 step3(call);
             });
             peer.on('error', function(err) {
-                alert(err.message);
+                console.log(err.message);
                 // Return to step 2 if error occurs
                 step2();
             });
@@ -232,7 +233,7 @@
                 <div class="pure-form"></div>
                 <p>Time: <span id="time">0:00</span></p>
                 <input type="text" placeholder="Call user id..." id="callto-id">
-                <a href="#" class="waves-effect green accent-3 btn" id="random-call">Call Random Peer</a>
+                <a href="#" class="waves-effect green accent-3 btn" id="random-call">Call Peer</a>
             </div>
             <div class="flow-text" id="step3">
                 <p>Currently in call with <span id="their-id">...</span></p>
