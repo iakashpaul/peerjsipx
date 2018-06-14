@@ -62,7 +62,8 @@
             // PeerJS object
             var stunURL = 'stun:stun.l.google.com:19302';
             var userID = chance.zip();
-            var peer = new Peer(userID, {
+            //userID, 
+            var peer = new Peer({
                 host: 'peerjsipx.herokuapp.com',
                 port: 443,
                 secure: true,
