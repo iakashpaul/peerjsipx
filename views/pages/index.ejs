@@ -26,34 +26,34 @@
 
         function randomAction(id) {
 
-            function randomizer() {
-                peer.listAllPeers(function cb(list) {
-                    console.log(list);
-                    idIndex = list.indexOf(id);
+            // function randomizer() {
+            peer.listAllPeers(function cb(list) {
+                console.log(list);
+                idIndex = list.indexOf(id);
 
-                    if (list.length <= 1 || idIndex === -1) {
-                        console.log('Failed to connect [', id, '] : not enough peers');
-                        window.existingCall.close();
-                        step2();
-                        alert("Not enough peers")
-                        return -1;
-                    } else {
-                        var otherPeerIdIndex;
-                        do {
-                            otherPeerIdIndex = Math.floor(Math.random() * list.length);
-                        } while (otherPeerIdIndex === idIndex);
+                if (list.length <= 1 || idIndex === -1) {
+                    console.log('Failed to connect [', id, '] : not enough peers');
+                    window.existingCall.close();
+                    step2();
+                    alert("Not enough peers")
+                    return -1;
+                } else {
+                    var otherPeerIdIndex;
+                    do {
+                        otherPeerIdIndex = Math.floor(Math.random() * list.length);
+                    } while (otherPeerIdIndex === idIndex);
 
-                        var otherPeerId = list[otherPeerIdIndex];
-                        console.log(otherPeerId);
-                        var call = peer.call((otherPeerId), window.localStream);
+                    var otherPeerId = list[otherPeerIdIndex];
+                    console.log(otherPeerId);
+                    var call = peer.call((otherPeerId), window.localStream);
 
-                        step3(call);
-                        return otherPeerId;
+                    step3(call);
+                    return otherPeerId;
 
-                    }
-                });
-            }
-            return randomizer;
+                }
+            });
+            // }
+            // return randomizer;
         }
 
         // Compatibility shim
