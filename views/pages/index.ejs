@@ -118,6 +118,16 @@
         }, function (error) {
             console.log(error);
         });
+        this.signOutBtn = document.getElementById('sign-out')
+
+        this.signOutBtn.addEventListener('mousedown', (e) => {
+            firebase.auth().signOut().then(function () {
+                console.log('Signed Out');
+                window.location = "https://peerjsipx.herokuapp.com";
+            }, function (error) {
+                console.error('Sign Out Error', error);
+            });
+        })
         //// PeerJS
         var data = "";
         var id = "";
@@ -286,8 +296,9 @@
             </div>
             <div class="nav-content purple darken-4">
                 <ul class="tabs tabs-transparent">
-                    <li><a class="waves-effect  green accent-3 btn">Connect</a></li>
-                    <li>
+                    <li><button class="btn waves-effect waves-light" id="sign-out">Log Out</button></li>
+                    <!--<a class="waves-effect  green accent-3 btn">  </a>
+                        <li>
                         <div class="input-field"><input id="text1" type="text" class="white black-text">
                             <label for="text1" class="grey-text">Text Box 1</label></div>
                     </li>
@@ -296,7 +307,7 @@
                     <li>
                         <div class="input-field"><input id="text2" type="text" class="white black-text">
                             <label for="text1" class="grey-text">Text Box 2</label></div>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
 
