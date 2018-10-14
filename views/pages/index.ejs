@@ -287,17 +287,25 @@
     <!-- <div id="sign-in-status"></div>
     <div id="sign-in" style="display:none"></div> -->
     <!-- <div id="account-details" style="display:none"></div> -->
-    <div id="firebaseui-auth-container"></div>
-    <div id="page" style="display:none">
+    <div id="firebaseui-auth-container">
         <nav class="nav-extended">
             <div class="nav-wrapper purple darken-4">
-                <a href="#!" class="brand-logo center"><i class="material-icons">tv</i>BetterNot</a>
+                <a href="#!" class="brand-logo center"><i class="material-icons">tv</i>Video chat-roulette demo by
+                    Akash</a>
                 <br>
             </div>
-            <div class="nav-content purple darken-4">
-                <ul class="tabs tabs-transparent">
-                    <li><button class="btn waves-effect waves-light" id="sign-out">Log Out</button></li>
-                    <!--<a class="waves-effect  green accent-3 btn">  </a>
+        </nav>
+    </div>
+    <div id="page" style="display:none"></div>
+    <nav class="nav-extended">
+        <div class="nav-wrapper purple darken-4">
+            <a href="#!" class="brand-logo center"><i class="material-icons">tv</i>BetterNot</a>
+            <br>
+        </div>
+        <div class="nav-content purple darken-4">
+            <ul class="tabs tabs-transparent">
+                <li><button class="btn waves-effect waves-light" id="sign-out">Log Out</button></li>
+                <!--<a class="waves-effect  green accent-3 btn">  </a>
                         <li>
                         <div class="input-field"><input id="text1" type="text" class="white black-text">
                             <label for="text1" class="grey-text">Text Box 1</label></div>
@@ -308,62 +316,62 @@
                         <div class="input-field"><input id="text2" type="text" class="white black-text">
                             <label for="text1" class="grey-text">Text Box 2</label></div>
                     </li> -->
-                </ul>
-            </div>
+            </ul>
+        </div>
 
 
-        </nav>
-        <div class="pure-g">
+    </nav>
+    <div class="pure-g">
 
-            <!-- Video area -->
-            <div class="pure-u-2-3" id="video-container">
-                <div class="card large">
-                    <video id="their-video" autoPlay="true"></video>
-                    <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Random Player</span>
+        <!-- Video area -->
+        <div class="pure-u-2-3" id="video-container">
+            <div class="card large">
+                <video id="their-video" autoPlay="true"></video>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Random Player</span>
 
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Steps -->
-            <div class="pure-u-1-3" id="video-container">
-                <div class="card small">
-                    <video id="my-video" muted="true" autoPlay="true"></video>
-                    <div class="card-content">
-                        <div class="flow-text">
-                            <p>Your id: <span id="my-id">...</span></p>
-                        </div>
-                    </div>
-                </div>
-                <!-- Get local audio/video stream -->
-                <div id="step1">
-                    <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for
-                        calls.</p>
-                    <div id="step1-error">
-                        <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and
-                            click allow when asked for permission by the browser.</p>
-                        <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
-                    </div>
-                </div>
-
-                <!-- Make calls to others -->
-                <div class="flow-text" id="step2">
-                    <div class="pure-form"></div>
-                    <p>Time: <span id="time">0:00</span></p>
-                    <input type="text" placeholder="Call user id..." id="callto-id">
-                    <a href="#" class="waves-effect green accent-3 btn" id="random-call">Call Random Peer</a>
-                </div>
-                <div class="flow-text" id="step3">
-                    <p>Currently in call with <span id="their-id">...</span></p>
-                    <p><a href="#" class="waves-effect red btn" id="end-call">End call</a></p>
                 </div>
             </div>
-
-            <!-- Call in progress -->
 
         </div>
+
+        <!-- Steps -->
+        <div class="pure-u-1-3" id="video-container">
+            <div class="card small">
+                <video id="my-video" muted="true" autoPlay="true"></video>
+                <div class="card-content">
+                    <div class="flow-text">
+                        <p>Your id: <span id="my-id">...</span></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Get local audio/video stream -->
+            <div id="step1">
+                <p>Please click `allow` on the top of the screen so we can access your webcam and microphone for
+                    calls.</p>
+                <div id="step1-error">
+                    <p>Failed to access the webcam and microphone. Make sure to run this demo on an http server and
+                        click allow when asked for permission by the browser.</p>
+                    <a href="#" class="pure-button pure-button-error" id="step1-retry">Try again</a>
+                </div>
+            </div>
+
+            <!-- Make calls to others -->
+            <div class="flow-text" id="step2">
+                <div class="pure-form"></div>
+                <p>Time: <span id="time">0:00</span></p>
+                <input type="text" placeholder="Call user id..." id="callto-id">
+                <a href="#" class="waves-effect green accent-3 btn" id="random-call">Call Random Peer</a>
+            </div>
+            <div class="flow-text" id="step3">
+                <p>Currently in call with <span id="their-id">...</span></p>
+                <p><a href="#" class="waves-effect red btn" id="end-call">End call</a></p>
+            </div>
+        </div>
+
+        <!-- Call in progress -->
+
+    </div>
     </div>
 </body>
 
