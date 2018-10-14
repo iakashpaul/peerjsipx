@@ -118,16 +118,19 @@
         }, function (error) {
             console.log(error);
         });
-        var signOutBtn = document.getElementById('sign-out')
+        window.onload = function () {
+            var signOutBtn = document.getElementById('sign-out')
 
-        signOutBtn.addEventListener('mousedown', (e) => {
-            firebase.auth().signOut().then(function () {
-                console.log('Signed Out');
-                window.location = "https://peerjsipx.herokuapp.com";
-            }, function (error) {
-                console.error('Sign Out Error', error);
-            });
-        })
+            signOutBtn.addEventListener('mousedown', (e) => {
+                firebase.auth().signOut().then(function () {
+                    console.log('Signed Out');
+                    window.location = "https://peerjsipx.herokuapp.com";
+                }, function (error) {
+                    console.error('Sign Out Error', error);
+                });
+            })
+        }
+
         //// PeerJS
         var data = "";
         var id = "";
