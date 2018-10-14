@@ -118,9 +118,9 @@
         }, function (error) {
             console.log(error);
         });
-        this.signOutBtn = document.getElementById('sign-out')
+        var signOutBtn = document.getElementById('sign-out')
 
-        this.signOutBtn.addEventListener('mousedown', (e) => {
+        signOutBtn.addEventListener('mousedown', (e) => {
             firebase.auth().signOut().then(function () {
                 console.log('Signed Out');
                 window.location = "https://peerjsipx.herokuapp.com";
