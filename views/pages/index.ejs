@@ -41,7 +41,7 @@
             signInSuccessUrl: 'https://peerjsipx.herokuapp.com',
             signInOptions: [
                 // Leave the lines as is for the providers you want to offer your users.
-
+                firebase.auth.GithubAuthProvider.PROVIDER_ID,
                 firebase.auth.EmailAuthProvider.PROVIDER_ID
             ], callbacks: {
                 signInSuccessWithAuthResult: function (authResult, redirectUrl) {
