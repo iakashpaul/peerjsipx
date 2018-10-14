@@ -80,8 +80,8 @@
                 var providerData = user.providerData;
                 userId = firebase.auth().currentUser.uid;
                 user.getIdToken().then(function (accessToken) {
-                    document.getElementById('sign-in-status').textContent = 'Signed in';
-                    document.getElementById('sign-in').textContent = 'Sign out';
+                    // document.getElementById('sign-in-status').textContent = 'Signed in';
+                    // document.getElementById('sign-in').textContent = 'Sign out';
                     // document.getElementById('account-details').textContent = JSON.stringify({
                     //   displayName: displayName,
                     //   email: email,
@@ -111,8 +111,8 @@
             } else {
                 // User is signed out.
                 document.getElementById("page").style.display = "none"
-                document.getElementById('sign-in-status').textContent = 'Signed out';
-                document.getElementById('sign-in').textContent = 'Sign in';
+                // document.getElementById('sign-in-status').textContent = 'Signed out';
+                // document.getElementById('sign-in').textContent = 'Sign in';
                 //  document.getElementById('account-details').textContent = 'null';
             }
         }, function (error) {
@@ -287,8 +287,8 @@
 </head>
 
 <body>
-    <div id="sign-in-status"></div>
-    <div id="sign-in" style="display:none"></div>
+    <!-- <div id="sign-in-status"></div>
+    <div id="sign-in" style="display:none"></div> -->
     <!-- <div id="account-details" style="display:none"></div> -->
     <div id="firebaseui-auth-container"></div>
     <div id="page" style="display:none">
